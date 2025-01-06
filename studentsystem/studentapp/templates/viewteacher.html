@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers List</title>
+    <style>
+        body {
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        h1 {
+          text-align:center ;
+          /* margin-bottom: 1em; */
+          /* font-size: 2em; */
+          /* color: var(--accent-color); */
+        }
+
+        .table-container {
+          width: 90%;
+          max-width: 1200px;
+          background: var(--secondary-color);
+          padding: 20px;
+          margin: 1em auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 0 auto;
+          text-align: left;
+        }
+        th, td {
+          padding: 12px 15px;
+          border: 1px solid #ddd;
+        }
+
+        th {
+          background: var(--table-header-color);
+          color: var(--table-header-text);
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+          background: #f2f2f2;
+        }
+
+        tr:hover {
+          background: #d9f9d9;
+        }
+
+        td {
+          color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teacher List</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Salary</th>
+                    <th>Experience</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>{{ i.teacher_id.first_name }} </td>
+                    <td>{{ i.teacher_id.last_name }}</td>
+                    <td>{{ i.teacher_id.email }}</td>
+                    <td>{{ i.address }}</td>
+                    <td>{{ i.phone_number }}</td>
+                    <td>{{ i.salary }}</td>
+                    <td>{{ i.experience }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

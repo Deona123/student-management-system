@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>FIRSTNAME</label>
+        <input type="text" name="Firstname" placeholder="Firstname"><br>
+        <label>LASTNAME</label>
+        <input type="text" name="Lastname" placeholder="Lastname"><br>
+        <label >ADDRESS</label>
+        <input type="text" name="Address" placeholder="Address">
+        <label>USERNAME</label>
+        <input type="text" name="Username" placeholder="Username"><br>
+        <label>PASSWORD</label>
+        <input type="password" name="password" placeholder="password"><br>
+        <label>EMAIL</label>
+        <input type="email" name="Email" placeholder="Email"><br>
+        <label>PHONENUMBER</label>
+        <input type="number" name="Phone_number" placeholder="Phone_number"><br>
+        <label>GUARDIAN</label>
+        <input type="text" name="guardian" placeholder="guardian"><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+</head>
+<body>
+    <form action="" method="post">
+    {% csrf_token %}
+    {% block content1 %}
+    <a href="/teacherreg/">ADD TEACHER</a><br>
+    <br>
+    <a href="/viewteacher/">VIEW TEACHER</a><br>
+    <br>
+    <a href="/deleteteacher/">DELETE TEACHER</a><br><br>
+    <a href="/viewstudent/">VIEW STUDENT</a><br><br>
+    <a href="/approvestudent/">APPROVE STUDENT</a><br><br>
+    <a href="/deletestudent/">DELETE STUDENT</a><br><br>
+    {% endblock content1 %}
+    </form>
+
+    {% block content2 %}
+
+    <h2>Welcome Admin,</h2>
+
+    {% endblock content2 %}
+</body>
+</html>

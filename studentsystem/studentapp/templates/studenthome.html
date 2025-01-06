@@ -1,0 +1,22 @@
+{% extends "admin_based.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student home page</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% block content1 %}
+        <a href="/hometeacher/">View Teacher</a>
+        <a href="/editstudent/">Edit Profile</a>
+        <a href="/logoutstudent/">Logout</a>
+        {% endblock content1 %}
+    </form>
+    {% block content2 %}
+    <h2>Welcome Student</h2>
+    {% endblock content2 %}
+</body>
+</html>
